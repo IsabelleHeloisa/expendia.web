@@ -1,9 +1,7 @@
-import React from 'react'
+import Header from "./components/Header"
 
-type Props = {}
-
-export default function App({}: Props) {
+export default function App( ) {
   return (
-    <div>Expendia</div>
+   <Header/>
   )
 }
