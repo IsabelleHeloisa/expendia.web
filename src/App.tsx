@@ -4,6 +4,7 @@ import mobileBanner from './img/mobile_banner.png'
 import googleStore from './img/Google.png'
 import feature from './img/Feature 1.png'
 import feature2 from './img/Feature 2.png'
+import screenshots from './img/screenshots.png'
 
 export default function App() {
   return (
@@ -68,6 +69,22 @@ export default function App() {
           </Typography>
         </Stack>
         <img src={feature2} alt="" width={400} />
+      </Stack>
+      <Stack
+        sx={{
+          backgroundImage: `url(${screenshots})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          width: '100%',
+          height: '200vh',
+          overflow: 'hidden'
+        }}
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Typography variant="h1" fontSize={35} color="white" mb={50}>
+          Screenshots
+        </Typography>
       </Stack>
     </>
   )
