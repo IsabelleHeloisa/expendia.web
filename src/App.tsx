@@ -70,21 +70,23 @@ export default function App() {
         </Stack>
         <img src={feature2} alt="" width={400} />
       </Stack>
-      <Stack
-        sx={{
-          backgroundImage: `url(${screenshots})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          width: '100%',
-          height: '200vh',
-          overflow: 'hidden'
-        }}
-        alignItems="center"
-        justifyContent="center"
-      >
-        <Typography variant="h1" fontSize={35} color="white" mb={50}>
-          Screenshots
-        </Typography>
+      <Stack paddingY={15}>
+        <Stack
+          sx={{
+            backgroundImage: `url(${screenshots})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'contain',
+            width: '100%',
+            height: '200vh',
+            overflow: 'hidden'
+          }}
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Typography variant="h1" fontSize={35} color="white" mb={50}>
+            Screenshots
+          </Typography>
+        </Stack>
       </Stack>
     </>
   )
