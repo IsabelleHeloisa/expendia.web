@@ -1,6 +1,14 @@
-import { Container, Stack, Typography } from '@mui/material'
+import {
+  Alert,
+  AlertTitle,
+  Container,
+  Skeleton,
+  Stack,
+  Typography
+} from '@mui/material'
 import { useState, useEffect } from 'react'
 import { api } from '../lib/axios'
+import dayjs from 'dayjs'
 
 interface TermProps {
   title: string
@@ -17,10 +25,7 @@ export default function Term({ title, slug }: TermProps) {
       setIsLoading(true)
       const response = await api.get(`/terms/${slug}`)
       setUpdatedAt(response.data?.term?.updatedAt || '')
-      if (response.data?.term?.text) {
-        console.log(response.data.term.text)
-        setText(response.data.term.text)
-      }
+      // if (response.data?.term?.text) setText(response.data.term.text)
     } catch (error) {
       console.error(error)
     } finally {
@@ -38,14 +43,33 @@ export default function Term({ title, slug }: TermProps) {
         <Typography variant="h1" fontSize={24}>
           {title}
         </Typography>
-        <Typography>Última atualização: {updatedAt}</Typography>
-        <Typography>
-          {isLoading ? (
-            'Verificando atualização do termo...'
-          ) : (
+        {updatedAt && (
+          <Typography>
+            Última atualização: {dayjs(updatedAt).format('DD/MM/YYYY HH:mm')}
+          </Typography>
+        )}
+        {isLoading ? (
+          <Stack gap={1}>
+            <Skeleton variant="text" sx={{ fontSize: 16 }} width="70%" />
+            <Skeleton variant="text" sx={{ fontSize: 16 }} width="90%" />
+            <Skeleton variant="text" sx={{ fontSize: 16 }} width="60%" />
+            <Skeleton variant="text" sx={{ fontSize: 16 }} width="70%" />
+            <Skeleton variant="text" sx={{ fontSize: 16 }} width="90%" />
+            <Skeleton variant="text" sx={{ fontSize: 16 }} width="60%" />
+          </Stack>
+        ) : text ? (
+          <Typography>
             <span style={{ whiteSpace: 'pre-wrap' }}>{text}</span>
-          )}
-        </Typography>
+          </Typography>
+        ) : (
+          <Alert severity="error">
+            <AlertTitle>
+              Ops! Não foi possível carregar o texto do termo
+            </AlertTitle>
+            Houve algum erro para trazer o texto deste termo. Tente novamente
+            mais tarde e se o erro persistir contate-nos!
+          </Alert>
+        )}
       </Stack>
     </Container>
   )
