@@ -3,7 +3,7 @@ import { Container, Stack, Typography } from '@mui/material'
 export default function DeleteAccount() {
   return (
     <Container>
-      <Stack gap={2} py={4}>
+      <Stack mt={10} gap={2} py={4}>
         <Typography variant="h1" fontSize={24}>
           Como deletar sua conta no aplicativo?
         </Typography>
@@ -17,19 +17,21 @@ export default function DeleteAccount() {
           </Typography>
           <Typography>
             Para excluir sua conta você precisa ir em{' '}
-            <strong>"Configurações"</strong>, na sessão
+            <strong>
+              "Configurações" (clicando sobre sua foto de perfil ou "avatar")
+            </strong>
+            , na sessão
             <strong>"Conta"</strong>, clique em <strong>"Excluir conta"</strong>
             , você será levado a uma tela que lhe informará as implicações da
             exclusão de sua conta. <br /> Ao clicar em{' '}
-            <strong>"Confirmar exclusão da conta"</strong>, você será levado a
-            uma tela onde solicitará que você digite o código de confirmação que
-            recebeu em seu e-mail para exclusão de sua conta. <br /> Ao
-            confirmar o código e se o mesmo estiver validado será realizado a
+            <strong>"EXCLUIR MINHA CONTA"</strong>, você será levado a uma tela
+            onde solicitará que você digite o código de confirmação que recebeu
+            em seu e-mail para exclusão de sua conta. <br /> Ao confirmar a
+            exclusão com o código e se o mesmo estiver válido, será realizado a
             exclusão de sua conta de maneira imediata, permanente e
             irreversível.
           </Typography>
           <Typography>
-            {' '}
             Será possível recriar sua conta e recadastrar seus dados a qualquer
             momento, mas os dados cadastrados em suas contas anteriores serão
             definitivamente irrecuperáveis.

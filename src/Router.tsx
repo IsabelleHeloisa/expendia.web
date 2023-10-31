@@ -2,10 +2,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Term from './pages/Term'
 import DeleteAccount from './pages/DeleteAccount'
+import Header from './components/Header'
 
 export default function Router() {
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path="" element={<Home />} />
         <Route

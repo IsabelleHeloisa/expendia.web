@@ -1,5 +1,4 @@
 import { Stack, Typography } from '@mui/material'
-import Header from '../components/Header'
 import mobileBanner from '../img/mobile_banner.png'
 import googleStore from '../img/Google.png'
 import feature from '../img/Feature 1.png'
@@ -11,7 +10,6 @@ import wave from '../img/wave.png'
 export default function Home() {
   return (
     <>
-      <Header />
       <Stack
         direction="row"
         py={10}
