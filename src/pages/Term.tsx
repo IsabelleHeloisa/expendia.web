@@ -25,7 +25,7 @@ export default function Term({ title, slug }: TermProps) {
       setIsLoading(true)
       const response = await api.get(`/terms/${slug}`)
       setUpdatedAt(response.data?.term?.updatedAt || '')
-      // if (response.data?.term?.text) setText(response.data.term.text)
+      if (response.data?.term?.text) setText(response.data.term.text)
     } catch (error) {
       console.error(error)
     } finally {
