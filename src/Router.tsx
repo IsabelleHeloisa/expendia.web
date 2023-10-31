@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Term from './pages/Term'
+import DeleteAccount from './pages/DeleteAccount'
 
 export default function Router() {
   return (
@@ -17,6 +18,7 @@ export default function Router() {
           path="/terms-of-use"
           element={<Term slug="terms-of-use" title="Termos de uso" />}
         />
+        <Route path="/delete-account" element={<DeleteAccount />} />
       </Routes>
     </BrowserRouter>
   )
