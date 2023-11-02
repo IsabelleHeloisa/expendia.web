@@ -1,6 +1,7 @@
-import { AppBar, Toolbar, Container, Stack, Typography } from '@mui/material'
+import { AppBar, Toolbar, Container, Stack } from '@mui/material'
 import logo from '../img/ExpendiaLogo.png'
 import { Link } from 'react-router-dom'
+import Navbar from './Navbar'
 
 export default function Header() {
   return (
@@ -19,17 +20,7 @@ export default function Header() {
                 width={200}
               />
             </Link>
-            <Stack direction="row" gap={3}>
-              <Typography color="black" fontSize={24}>
-                Recursos
-              </Typography>
-              <Typography color="black" fontSize={24}>
-                Screenshots
-              </Typography>
-              <Typography color="black" fontSize={24}>
-                Faq
-              </Typography>
-            </Stack>
+            <Navbar />
           </Stack>
         </Toolbar>
       </Container>

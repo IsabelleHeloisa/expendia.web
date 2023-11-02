@@ -33,59 +33,67 @@ export default function Home() {
           />
         </Stack>
       </Stack>
-      <Stack alignItems="center" justifyContent="center">
-        <Typography variant="h1" fontSize={35}>
-          Recursos
-        </Typography>
-      </Stack>
-      <Stack
-        direction="row"
-        py={10}
-        justifyContent="space-around"
-        alignItems="center"
-      >
-        <img src={feature} alt="" width={400} />
-        <Stack gap={2}>
-          <Typography variant="h3" fontSize={30} fontWeight="bold">
-            Vivamus sit amet interdum
-          </Typography>
-          <Typography fontSize={20}>
-            Nam sollicitudin dignissim nunc, cursus <br /> ullamcorper eros
-            vulptate sed. Vestibulum sit <br /> amet tortor sit amet libero
-            lobortis.
+      <section id="recursos">
+        <Stack alignItems="center" justifyContent="center">
+          <Typography variant="h1" fontSize={35}>
+            Recursos
           </Typography>
         </Stack>
-      </Stack>
-      <Stack direction="row" alignItems="center" justifyContent="space-around">
-        <Stack gap={2}>
-          <Typography variant="h3" fontSize={30} fontWeight="bold">
-            Vivamus sit amet interdum
-          </Typography>
-          <Typography fontSize={20}>
-            Maecenas nisl libero, tincidunt id odio id, feugiat <br /> vulputate
-            quam vestibulum feugiat.
-          </Typography>
-        </Stack>
-        <img src={feature2} alt="" width={400} />
-      </Stack>
-      <Stack paddingY={15}>
         <Stack
-          sx={{
-            backgroundImage: `url(${screenshots})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'contain',
-            width: '100%',
-            height: '200vh',
-            overflow: 'hidden'
-          }}
+          direction="row"
+          py={10}
+          justifyContent="space-around"
           alignItems="center"
-          justifyContent="center"
         >
-          <Typography variant="h1" fontSize={35} color="white" mb={50}>
-            Screenshots
-          </Typography>
+          <img src={feature} alt="" width={400} />
+          <Stack gap={2}>
+            <Typography variant="h3" fontSize={30} fontWeight="bold">
+              Vivamus sit amet interdum
+            </Typography>
+            <Typography fontSize={20}>
+              Nam sollicitudin dignissim nunc, cursus <br /> ullamcorper eros
+              vulptate sed. Vestibulum sit <br /> amet tortor sit amet libero
+              lobortis.
+            </Typography>
+          </Stack>
         </Stack>
-      </Stack>
+        <Stack
+          direction="row"
+          alignItems="center"
+          justifyContent="space-around"
+        >
+          <Stack gap={2}>
+            <Typography variant="h3" fontSize={30} fontWeight="bold">
+              Vivamus sit amet interdum
+            </Typography>
+            <Typography fontSize={20}>
+              Maecenas nisl libero, tincidunt id odio id, feugiat <br />{' '}
+              vulputate quam vestibulum feugiat.
+            </Typography>
+          </Stack>
+          <img src={feature2} alt="" width={400} />
+        </Stack>
+      </section>
+      <section id="screenshots">
+        <Stack paddingY={15}>
+          <Stack
+            sx={{
+              backgroundImage: `url(${screenshots})`,
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'contain',
+              width: '100%',
+              height: '200vh',
+              overflow: 'hidden'
+            }}
+            alignItems="center"
+            justifyContent="center"
+          >
+            <Typography variant="h1" fontSize={35} color="white" mb={50}>
+              Screenshots
+            </Typography>
+          </Stack>
+        </Stack>
+      </section>
     </>
   )
 }
