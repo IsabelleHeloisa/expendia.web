@@ -3,6 +3,7 @@ import Home from './pages/Home'
 import Term from './pages/Term'
 import DeleteAccount from './pages/DeleteAccount'
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 export default function Router() {
   return (
@@ -22,6 +23,7 @@ export default function Router() {
         />
         <Route path="/delete-account" element={<DeleteAccount />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
