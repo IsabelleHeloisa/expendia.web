@@ -4,6 +4,7 @@ import googleStore from '../img/Google.png'
 import feature from '../img/Feature 1.png'
 import feature2 from '../img/Feature 2.png'
 import screenshots from '../img/screenshots.png'
+import bitmap from '../img/Bitmap.png'
 
 export default function Home() {
   return (
@@ -82,7 +83,7 @@ export default function Home() {
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'contain',
               width: '100%',
-              height: '200vh',
+              height: '160vh',
               overflow: 'hidden'
             }}
             alignItems="center"
@@ -91,6 +92,27 @@ export default function Home() {
             <Typography variant="h1" fontSize={35} color="white" mb={50}>
               Screenshots
             </Typography>
+          </Stack>
+        </Stack>
+      </section>
+      <section id="faq">
+        <Stack>
+          <Stack alignItems="center" justifyContent="center">
+            <Typography variant="h1" fontSize={35}>
+              FAQ
+            </Typography>
+          </Stack>
+          <Stack
+            direction="row"
+            alignItems="center"
+            justifyContent="space-around"
+          >
+            <img src={bitmap} alt="" width={400} />
+            <Stack>
+              <Typography variant="h3" fontSize={30} fontWeight="bold">
+                EM BREVE...
+              </Typography>
+            </Stack>
           </Stack>
         </Stack>
       </section>
