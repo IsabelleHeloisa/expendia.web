@@ -61,7 +61,7 @@ export default function Footer() {
             </Typography>
             <Link to="mailto:help@expendia.luigiraynel.com.br" target="_blank">
               <Typography color="white">
-                help@expendia.luigiraynel.com
+                help@expendia.luigiraynel.com.br
               </Typography>
             </Link>
           </Stack>
