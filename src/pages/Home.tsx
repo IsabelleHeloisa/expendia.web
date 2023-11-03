@@ -36,7 +36,7 @@ export default function Home() {
             backgroundImage: `url(${rectangle})`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
-            height: '550px'
+            height: '500px'
           }}
         >
           <Stack alignItems="center">
