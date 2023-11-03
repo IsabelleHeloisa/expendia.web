@@ -11,7 +11,7 @@ export default function Header() {
     >
       <Container>
         <Toolbar disableGutters>
-          <Stack direction="row" alignItems="center" py={2} gap={10}>
+          <Stack direction="row" justifyContent="center" py={2} gap={10}>
             <Link to="/">
               <img
                 src={logo}
