@@ -1,10 +1,11 @@
-import { Stack, Typography } from '@mui/material'
+import { Container, Stack, Typography } from '@mui/material'
 import mobileBanner from '../img/mobile_banner.png'
 import googleStore from '../img/Google.png'
 import feature from '../img/Feature 1.png'
 import feature2 from '../img/Feature 2.png'
 import screenshots from '../img/screenshots.png'
 import bitmap from '../img/Bitmap.png'
+import rectangle from '../img/Rectangle.png'
 
 export default function Home() {
   return (
@@ -13,25 +14,39 @@ export default function Home() {
         direction="row"
         py={10}
         alignItems="center"
-        justifyContent="space-around"
+        justifyContent="space-between"
+        width="100%"
       >
-        <Stack gap={2}>
-          <Typography fontSize={50}>
-            Descomplique o{' '}
-            <Typography variant="inherit" color="#673AB7">
-              controle de despesas
-            </Typography>{' '}
-            em grupos, famílias e <br /> casais
-          </Typography>
-          <img src={googleStore} alt="" width={150} />
+        <Stack width="50%" gap={2}>
+          <Container>
+            <Typography fontSize={50}>
+              Descomplique o{' '}
+              <Typography variant="inherit" color="#673AB7">
+                controle de despesas
+              </Typography>{' '}
+              em grupos, famílias e <br /> casais
+            </Typography>
+            <img src={googleStore} alt="" width={150} />
+          </Container>
         </Stack>
-        <Stack>
-          <img
-            src={mobileBanner}
-            alt="Mobile banner"
-            title="Mobile banner"
-            width={500}
-          />
+        <Stack
+          width="50%"
+          justifyContent="center"
+          sx={{
+            backgroundImage: `url(${rectangle})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            height: '550px'
+          }}
+        >
+          <Stack alignItems="center">
+            <img
+              src={mobileBanner}
+              alt="Mobile banner"
+              title="Mobile banner"
+              width={500}
+            />
+          </Stack>
         </Stack>
       </Stack>
       <section id="recursos">
