@@ -59,7 +59,11 @@ export default function Footer() {
             <Typography fontSize={20} color="white">
               Contato
             </Typography>
-            <Link to="mailto:help@expendia.luigiraynel.com.br" target="_blank">
+            <Link
+              to="mailto:help@expendia.luigiraynel.com.br"
+              target="_blank"
+              style={{ textDecoration: 'none' }}
+            >
               <Typography color="white">
                 help@expendia.luigiraynel.com.br
               </Typography>
