@@ -1,4 +1,4 @@
-import { Stack, Typography } from '@mui/material'
+import { Container, Stack, Typography } from '@mui/material'
 import logo from '../img/ExpendiaLogo.png'
 import wave from '../img/wave.png'
 import { Link } from 'react-router-dom'
@@ -14,17 +14,27 @@ export default function Footer() {
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           width: '100%',
-          height: '100vh'
+          height: {
+            xs: '100%',
+            md: '150vh',
+            lg: '100vh'
+          }
         }}
         alignItems="center"
-        justifyContent="center"
-        gap={5}
+        pt={{ xs: 25, md: 30, lg: 30 }}
+        pb={2}
+        gap={4}
+        px={2}
       >
         <Typography variant="h1" fontSize={35} color="white">
           Está esperando o quê? Instale agora!
         </Typography>
         <GooglePlayButton />
-        <Stack direction="row" gap={10} alignItems="center">
+        <Stack
+          direction={{ xs: 'column', md: 'row' }}
+          gap={10}
+          alignItems={{ xs: 'start', md: 'center' }}
+        >
           <Stack>
             <Link to="/">
               <img

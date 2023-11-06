@@ -1,9 +1,19 @@
-import { AppBar, Toolbar, Container, Stack } from '@mui/material'
+import { AppBar, Toolbar, Container, Stack, IconButton } from '@mui/material'
 import logo from '../img/ExpendiaLogo.png'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
+import { FiMenu } from 'react-icons/fi'
+import { HiMenu } from 'react-icons/hi'
+import { useState } from 'react'
+import MenuMobile from './MenuMobile'
 
 export default function Header() {
+  const [open, setOpen] = useState(false)
+
+  const handleDrawerOpen = () => {
+    setOpen(true)
+  }
+
   return (
     <AppBar
       position="fixed"
@@ -11,7 +21,14 @@ export default function Header() {
     >
       <Container>
         <Toolbar disableGutters>
-          <Stack direction="row" justifyContent="center" py={2} gap={10}>
+          <Stack
+            direction="row"
+            justifyContent={{ xs: 'space-between', md: 'flex-start' }}
+            alignItems="center"
+            width="100%"
+            py={2}
+            gap={10}
+          >
             <Link to="/">
               <img
                 src={logo}
@@ -21,6 +38,18 @@ export default function Header() {
               />
             </Link>
             <Navbar />
+
+            <Stack>
+              <IconButton
+                sx={{
+                  display: { xs: 'flex', md: 'none' }
+                }}
+                onClick={handleDrawerOpen}
+              >
+                <FiMenu size={30} />
+              </IconButton>
+            </Stack>
+            <MenuMobile open={open} onClose={() => setOpen(false)} />
           </Stack>
         </Toolbar>
       </Container>
