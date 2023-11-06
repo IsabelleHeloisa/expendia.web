@@ -6,6 +6,7 @@ import feature2 from '../img/Feature 2.png'
 import screenshots from '../img/screenshots.png'
 import bitmap from '../img/Bitmap.png'
 import rectangle from '../img/Rectangle.png'
+import GooglePlayButton from '../components/GooglePlayButton'
 
 export default function Home() {
   return (
@@ -17,8 +18,8 @@ export default function Home() {
         justifyContent="space-between"
         width="100%"
       >
-        <Stack width="50%" gap={2}>
-          <Container>
+        <Container sx={{ width: '50%' }}>
+          <Stack gap={3}>
             <Typography fontSize={50}>
               Descomplique o{' '}
               <Typography variant="inherit" color="#673AB7">
@@ -26,9 +27,9 @@ export default function Home() {
               </Typography>{' '}
               em grupos, famílias e <br /> casais
             </Typography>
-            <img src={googleStore} alt="" width={150} />
-          </Container>
-        </Stack>
+            <GooglePlayButton />
+          </Stack>
+        </Container>
         <Stack
           width="50%"
           justifyContent="center"

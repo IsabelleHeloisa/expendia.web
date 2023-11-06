@@ -3,6 +3,7 @@ import logo from '../img/ExpendiaLogo.png'
 import wave from '../img/wave.png'
 import googleStore from '../img/Google.png'
 import { Link } from 'react-router-dom'
+import GooglePlayButton from './GooglePlayButton'
 
 export default function Footer() {
   return (
@@ -14,7 +15,6 @@ export default function Footer() {
           backgroundSize: 'cover',
           width: '100%',
           height: '100vh'
-          // overflow: 'hidden'
         }}
         alignItems="center"
         justifyContent="center"
@@ -23,7 +23,7 @@ export default function Footer() {
         <Typography variant="h1" fontSize={35} color="white">
           Está esperando o quê? Instale agora!
         </Typography>
-        <img src={googleStore} alt="" width={200} />
+        <GooglePlayButton />
         <Stack direction="row" gap={10} alignItems="center">
           <Stack>
             <Link to="/">
