@@ -1,11 +1,11 @@
 import { Stack, Typography } from '@mui/material'
 import logo from '../img/ExpendiaLogo.png'
 import wave from '../img/wave.png'
-import googleStore from '../img/Google.png'
 import { Link } from 'react-router-dom'
 import GooglePlayButton from './GooglePlayButton'
 
 export default function Footer() {
+  const email = process.env.REACT_APP_CONTACT_EMAIL || 'help@expendia.app'
   return (
     <footer>
       <Stack
@@ -45,7 +45,7 @@ export default function Footer() {
               to="/privacy-policy"
               title="Política de privacidade"
             >
-              <Typography color="white"> Política de privacidade</Typography>
+              <Typography color="white">Política de privacidade</Typography>
             </Link>
             <Link
               style={{ textDecoration: 'none' }}
@@ -60,13 +60,11 @@ export default function Footer() {
               Contato
             </Typography>
             <Link
-              to="mailto:help@expendia.luigiraynel.com.br"
+              to={`mailto:${email}`}
               target="_blank"
               style={{ textDecoration: 'none' }}
             >
-              <Typography color="white">
-                help@expendia.luigiraynel.com.br
-              </Typography>
+              <Typography color="white">{email}</Typography>
             </Link>
           </Stack>
         </Stack>

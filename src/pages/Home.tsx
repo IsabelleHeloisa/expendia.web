@@ -1,6 +1,5 @@
 import { Container, Stack, Typography } from '@mui/material'
 import mobileBanner from '../img/mobile_banner.png'
-import googleStore from '../img/Google.png'
 import feature from '../img/Feature 1.png'
 import feature2 from '../img/Feature 2.png'
 import screenshots from '../img/screenshots.png'

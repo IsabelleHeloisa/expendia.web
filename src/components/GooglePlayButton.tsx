@@ -3,9 +3,10 @@ import googlePlayImg from '../img/Google.png'
 export default function GooglePlayButton() {
   return (
     <a
-      href="https://play.google.com/store/search?q=Expendia&c=apps&hl=pt_BR&gl=US"
+      href={process.env.REACT_APP_GOOGLE_PLAY_LINK || '#'}
       target="_blank"
       title="Baixar aplicativo"
+      rel="noreferrer"
     >
       <img src={googlePlayImg} alt="Baixar aplicativo" width={200} />
     </a>
