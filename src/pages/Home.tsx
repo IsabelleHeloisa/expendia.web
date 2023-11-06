@@ -38,7 +38,7 @@ export default function Home() {
           width={{ xs: '100%', md: '50%' }}
           justifyContent="center"
           sx={{
-            backgroundImage: `url(${rectangle})`,
+            backgroundImage: { xs: '', md: `url(${rectangle})` },
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             height: '500px'
@@ -95,7 +95,7 @@ export default function Home() {
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'contain',
             width: '100%',
-            height: '200vh',
+            height: { xs: '50vh', md: '200vh' },
             overflow: 'hidden'
           }}
           alignItems="center"
