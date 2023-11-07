@@ -10,7 +10,7 @@ import FeatureBox from '../components/FeatureBox'
 
 export default function Home() {
   return (
-    <Box component="main">
+    <Box component="main" maxWidth="100vw" width="100%">
       <Stack
         direction={{
           xs: 'column',
@@ -29,7 +29,7 @@ export default function Home() {
               <Typography variant="inherit" color="#673AB7">
                 controle de despesas
               </Typography>{' '}
-              em grupos, famílias e <br /> casais
+              em grupos, famílias e casais.
             </Typography>
             <GooglePlayButton />
           </Stack>
@@ -45,48 +45,56 @@ export default function Home() {
           }}
         >
           <Stack alignItems="center">
-            <img
-              src={mobileBanner}
-              alt="Mobile banner"
-              title="Mobile banner"
-              width={500}
-            />
+            <Box width={{ xs: '100%', md: 500 }}>
+              <img
+                src={mobileBanner}
+                alt="Mobile banner"
+                title="Mobile banner"
+                width="100%"
+              />
+            </Box>
           </Stack>
         </Stack>
       </Stack>
       <section id="recursos">
-        <Stack gap={4}>
-          <Stack alignItems="center" justifyContent="center">
-            <Typography variant="h1" fontSize={35}>
-              Recursos
-            </Typography>
+        <Container>
+          <Stack gap={4}>
+            <Stack alignItems="center" justifyContent="center">
+              <Typography variant="h1" fontSize={35}>
+                Recursos
+              </Typography>
+            </Stack>
+            <FeatureBox>
+              <Box width={{ xs: '100%', md: 400 }}>
+                <img src={feature} alt="" width="100%" />
+              </Box>
+              <Stack gap={2}>
+                <Typography variant="h3" fontSize={30} fontWeight="bold">
+                  Vivamus sit amet interdum
+                </Typography>
+                <Typography fontSize={20}>
+                  Nam sollicitudin dignissim nunc, cursus <br /> ullamcorper
+                  eros vulptate sed. Vestibulum sit <br /> amet tortor sit amet
+                  libero lobortis.
+                </Typography>
+              </Stack>
+            </FeatureBox>
+            <FeatureBox>
+              <Stack gap={2}>
+                <Typography variant="h3" fontSize={30} fontWeight="bold">
+                  Vivamus sit amet interdum
+                </Typography>
+                <Typography fontSize={20}>
+                  Maecenas nisl libero, tincidunt id odio id, feugiat <br />{' '}
+                  vulputate quam vestibulum feugiat.
+                </Typography>
+              </Stack>
+              <Box width={{ xs: '100%', md: 400 }}>
+                <img src={feature2} alt="" width="100%" />
+              </Box>
+            </FeatureBox>
           </Stack>
-          <FeatureBox>
-            <img src={feature} alt="" width={400} />
-            <Stack gap={2}>
-              <Typography variant="h3" fontSize={30} fontWeight="bold">
-                Vivamus sit amet interdum
-              </Typography>
-              <Typography fontSize={20}>
-                Nam sollicitudin dignissim nunc, cursus <br /> ullamcorper eros
-                vulptate sed. Vestibulum sit <br /> amet tortor sit amet libero
-                lobortis.
-              </Typography>
-            </Stack>
-          </FeatureBox>
-          <FeatureBox>
-            <Stack gap={2}>
-              <Typography variant="h3" fontSize={30} fontWeight="bold">
-                Vivamus sit amet interdum
-              </Typography>
-              <Typography fontSize={20}>
-                Maecenas nisl libero, tincidunt id odio id, feugiat <br />{' '}
-                vulputate quam vestibulum feugiat.
-              </Typography>
-            </Stack>
-            <img src={feature2} alt="" width={400} />
-          </FeatureBox>
-        </Stack>
+        </Container>
       </section>
       <section id="screenshots">
         <Stack

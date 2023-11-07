@@ -1,4 +1,11 @@
-import { AppBar, Toolbar, Container, Stack, IconButton } from '@mui/material'
+import {
+  AppBar,
+  Toolbar,
+  Container,
+  Stack,
+  IconButton,
+  Box
+} from '@mui/material'
 import logo from '../img/ExpendiaLogo.png'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
@@ -15,44 +22,50 @@ export default function Header() {
   }
 
   return (
-    <AppBar
-      position="fixed"
-      sx={{ boxShadow: 'none', marginBottom: '10px', background: 'white' }}
-    >
-      <Container>
-        <Toolbar disableGutters>
-          <Stack
-            direction="row"
-            justifyContent={{ xs: 'space-between', md: 'flex-start' }}
-            alignItems="center"
-            width="100%"
-            py={2}
-            gap={10}
-          >
-            <Link to="/">
-              <img
-                src={logo}
-                title="Expendia"
-                alt="Expendia logo"
-                width={200}
-              />
-            </Link>
-            <Navbar />
-
-            <Stack>
-              <IconButton
-                sx={{
-                  display: { xs: 'flex', md: 'none' }
-                }}
-                onClick={handleDrawerOpen}
-              >
-                <FiMenu size={30} />
-              </IconButton>
+    <Box flexGrow={1}>
+      <AppBar
+        position="fixed"
+        sx={{
+          boxShadow: 'none',
+          marginBottom: '10px',
+          background: 'white',
+          width: '100%'
+        }}
+      >
+        <Container>
+          <Toolbar disableGutters>
+            <Stack
+              direction="row"
+              justifyContent={{ xs: 'space-between', md: 'flex-start' }}
+              alignItems="center"
+              width="100%"
+              py={2}
+              gap={10}
+            >
+              <Link to="/">
+                <img
+                  src={logo}
+                  title="Expendia"
+                  alt="Expendia logo"
+                  width={200}
+                />
+              </Link>
+              <Navbar display={{ xs: 'none', md: 'flex' }} />
+              <Stack>
+                <IconButton
+                  sx={{
+                    display: { xs: 'flex', md: 'none' }
+                  }}
+                  onClick={handleDrawerOpen}
+                >
+                  <FiMenu size={30} />
+                </IconButton>
+              </Stack>
+              <MenuMobile open={open} onClose={() => setOpen(false)} />
             </Stack>
-            <MenuMobile open={open} onClose={() => setOpen(false)} />
-          </Stack>
-        </Toolbar>
-      </Container>
-    </AppBar>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </Box>
   )
 }

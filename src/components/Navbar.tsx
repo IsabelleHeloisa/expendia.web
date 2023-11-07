@@ -1,47 +1,53 @@
-import { Stack, Typography } from '@mui/material'
+import { Stack, StackProps, Typography } from '@mui/material'
 import { Link as LinkScroll } from 'react-scroll'
 
-export default function Navbar() {
+interface NavbarProps extends StackProps {
+  onClickLink?: () => void
+}
+
+export type NavbarLink = {
+  to: string
+  label: string
+}
+
+export default function Navbar({ onClickLink, ...rest }: NavbarProps) {
+  const links: NavbarLink[] = [
+    {
+      to: 'recursos',
+      label: 'Recursos'
+    },
+    {
+      to: 'screenshots',
+      label: 'Screenshots'
+    },
+    {
+      to: 'faq',
+      label: 'Faq'
+    }
+  ]
+
   return (
-    <Stack direction="row" gap={3} display={{ xs: 'none', md: 'flex' }}>
-      <LinkScroll
-        to="recursos"
-        smooth={true}
-        duration={500}
-        style={{ textDecoration: 'none' }}
-      >
-        <Typography
-          color="black"
-          fontSize={24}
-          sx={{
-            ':hover': { cursor: 'pointer' }
-          }}
+    <Stack direction="row" gap={3} {...rest}>
+      {links.map(link => (
+        <LinkScroll
+          key={link.to}
+          to={link.to}
+          smooth={true}
+          duration={500}
+          style={{ textDecoration: 'none' }}
+          onClick={onClickLink}
         >
-          Recursos
-        </Typography>
-      </LinkScroll>
-      <LinkScroll to="screenshots" style={{ textDecoration: 'none' }}>
-        <Typography
-          color="black"
-          fontSize={24}
-          sx={{
-            ':hover': { cursor: 'pointer' }
-          }}
-        >
-          Screenshots
-        </Typography>
-      </LinkScroll>
-      <LinkScroll to="faq" style={{ textDecoration: 'none' }}>
-        <Typography
-          color="black"
-          fontSize={24}
-          sx={{
-            ':hover': { cursor: 'pointer' }
-          }}
-        >
-          Faq
-        </Typography>
-      </LinkScroll>
+          <Typography
+            color="black"
+            fontSize={24}
+            sx={{
+              ':hover': { cursor: 'pointer' }
+            }}
+          >
+            {link.label}
+          </Typography>
+        </LinkScroll>
+      ))}
     </Stack>
   )
 }
