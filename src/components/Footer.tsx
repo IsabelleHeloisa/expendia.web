@@ -1,4 +1,4 @@
-import { Container, Stack, Typography } from '@mui/material'
+import { Stack, Typography } from '@mui/material'
 import logo from '../img/ExpendiaLogo.png'
 import wave from '../img/wave.png'
 import { Link } from 'react-router-dom'

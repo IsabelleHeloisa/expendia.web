@@ -6,7 +6,7 @@ import {
   Stack,
   Typography
 } from '@mui/material'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { api } from '../lib/axios'
 import dayjs from 'dayjs'
 
@@ -20,7 +20,7 @@ export default function Term({ title, slug }: TermProps) {
   const [updatedAt, setUpdatedAt] = useState('')
   const [isLoading, setIsLoading] = useState(true)
 
-  const getTerm = async () => {
+  const getTerm = useCallback(async () => {
     try {
       setIsLoading(true)
       const response = await api.get(`/terms/${slug}`)
@@ -31,11 +31,11 @@ export default function Term({ title, slug }: TermProps) {
     } finally {
       setIsLoading(false)
     }
-  }
+  }, [slug])
 
   useEffect(() => {
     getTerm()
-  }, [slug])
+  }, [getTerm, slug])
 
   return (
     <Container>

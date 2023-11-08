@@ -10,7 +10,6 @@ import logo from '../img/ExpendiaLogo.png'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
 import { FiMenu } from 'react-icons/fi'
-import { HiMenu } from 'react-icons/hi'
 import { useState } from 'react'
 import MenuMobile from './MenuMobile'
 
