@@ -6,6 +6,9 @@ import GooglePlayButton from './GooglePlayButton'
 
 export default function Footer() {
   const email = process.env.REACT_APP_CONTACT_EMAIL || 'help@expendia.app'
+
+  const scrollToTop = () => window.scrollTo(0, 0)
+
   return (
     <footer>
       <Stack
@@ -52,6 +55,7 @@ export default function Footer() {
             </Typography>
             <Link
               style={{ textDecoration: 'none' }}
+              onClick={scrollToTop}
               to="/privacy-policy"
               title="Política de privacidade"
             >
@@ -59,6 +63,7 @@ export default function Footer() {
             </Link>
             <Link
               style={{ textDecoration: 'none' }}
+              onClick={scrollToTop}
               to="/terms-of-use"
               title="Termos de uso"
             >
