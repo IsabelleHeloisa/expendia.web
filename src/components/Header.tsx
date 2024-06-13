@@ -1,11 +1,4 @@
-import {
-  AppBar,
-  Toolbar,
-  Container,
-  Stack,
-  IconButton,
-  Box
-} from '@mui/material'
+import { AppBar, Toolbar, Container, Stack, IconButton } from '@mui/material'
 import logo from '../img/ExpendiaLogo.png'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
