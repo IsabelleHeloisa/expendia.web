@@ -1,5 +1,5 @@
 import { Box, Container, Stack, Typography } from '@mui/material'
-import mobileBanner from '../img/mobile_banner.png'
+import Banner from '../img/Banner.png'
 import feature from '../img/Feature 1.png'
 import feature2 from '../img/Feature 2.png'
 import screenshots from '../img/screenshots.png'
@@ -26,7 +26,7 @@ export default function Home() {
           <Stack gap={3}>
             <Typography fontSize={{ xs: 40, md: 50 }}>
               Descomplique o{' '}
-              <Typography variant="inherit" color="#673AB7">
+              <Typography variant="inherit" color="#A34FD8">
                 controle de despesas
               </Typography>{' '}
               em grupos, famílias e casais.
@@ -34,20 +34,11 @@ export default function Home() {
             <GooglePlayButton />
           </Stack>
         </Container>
-        <Stack
-          width={{ xs: '100%', md: '50%' }}
-          justifyContent="center"
-          sx={{
-            backgroundImage: { xs: '', md: `url(${rectangle})` },
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            height: '500px'
-          }}
-        >
+        <Stack>
           <Stack alignItems="center">
-            <Box width={{ xs: '100%', md: 500 }}>
+            <Box width={{ xs: '100%', md: 600 }} padding={2}>
               <img
-                src={mobileBanner}
+                src={Banner}
                 alt="Mobile banner"
                 title="Mobile banner"
                 width="100%"

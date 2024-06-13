@@ -64,7 +64,7 @@ export default function Navbar({ onClickLink, ...rest }: NavbarProps) {
             onClick={onClickLink}
           >
             <Typography
-              color="black"
+              color="white"
               fontSize={24}
               sx={{
                 ':hover': { cursor: 'pointer' }
@@ -81,7 +81,7 @@ export default function Navbar({ onClickLink, ...rest }: NavbarProps) {
             onClick={onClickLink}
           >
             <Typography
-              color={isActive(link) ? '#673AB7' : 'black'}
+              color={isActive(link) ? '#673AB7' : 'white'}
               fontSize={24}
               sx={{
                 ':hover': { cursor: 'pointer' }
