@@ -15,7 +15,8 @@ export default function MenuMobile({ open, onClose }: Props) {
         overflow: 'hidden',
         '& .MuiDrawer-paper': {
           width: 250,
-          boxSizing: 'border-box'
+          boxSizing: 'border-box',
+          background: '#A34FD8'
         },
         display: {
           xs: 'flex',

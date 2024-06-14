@@ -64,7 +64,6 @@ export default function Navbar({ onClickLink, ...rest }: NavbarProps) {
             onClick={onClickLink}
           >
             <Typography
-              color="white"
               fontSize={24}
               sx={{
                 ':hover': { cursor: 'pointer' }

@@ -1,9 +1,9 @@
 import { Box, Container, Stack, Typography } from '@mui/material'
 import Banner from '../img/Banner.png'
-import feature from '../img/Feature 1.png'
-import feature2 from '../img/Feature 2.png'
+import coin from '../img/coin_expendia.png'
+import coin2 from '../img/coin_expendia2.png'
 import screenshots from '../img/screenshots.png'
-import bitmap from '../img/Bitmap.png'
+import faq from '../img/faq.png'
 import GooglePlayButton from '../components/GooglePlayButton'
 import FeatureBox from '../components/FeatureBox'
 
@@ -35,7 +35,7 @@ export default function Home() {
         </Container>
         <Stack>
           <Stack alignItems="center">
-            <Box width={{ xs: '100%', md: 600 }} padding={2}>
+            <Box width={{ xs: '100%', md: 800 }} padding={2}>
               <img
                 src={Banner}
                 alt="Mobile banner"
@@ -56,7 +56,7 @@ export default function Home() {
             </Stack>
             <FeatureBox>
               <Box width={{ xs: '100%', md: 400 }}>
-                <img src={feature} alt="" width="100%" />
+                <img src={coin} alt="" width="100%" />
               </Box>
               <Stack gap={2}>
                 <Typography variant="h3" fontSize={30} fontWeight="bold">
@@ -80,7 +80,7 @@ export default function Home() {
                 </Typography>
               </Stack>
               <Box width={{ xs: '100%', md: 400 }}>
-                <img src={feature2} alt="" width="100%" />
+                <img src={coin2} alt="" width="100%" />
               </Box>
             </FeatureBox>
           </Stack>
@@ -120,8 +120,9 @@ export default function Home() {
             alignItems="center"
             justifyContent="space-around"
             gap={2}
+            paddingTop={10}
           >
-            <img src={bitmap} alt="" width={400} />
+            <img src={faq} alt="" width={500} />
             <Stack>
               <Typography variant="h3" fontSize={30} fontWeight="bold">
                 EM BREVE...
